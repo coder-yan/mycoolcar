@@ -39,6 +39,17 @@
             "groupIdx": 0,
             "groupName": "测试模拟群0"
           }
+        },
+        {
+          "name": "",
+          "pathName": "pages/register/register",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "groupInfo": {
+            "groupIdx": 0,
+            "groupName": "测试模拟群0"
+          }
         }
       ]
     }

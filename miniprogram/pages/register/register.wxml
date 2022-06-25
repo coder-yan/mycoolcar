@@ -1,2 +1,8 @@
-<!--pages/register/register.wxml-->
-<text>pages/register/register.wxml</text>
+<view class="container">
+    <view wx:if="{{!hasLicImage}}" class="lic-template">
+        <image class="lic-image" src="/image/lic.png" />
+        <view class="cuIcon-cameraadd lg text-gray" ></view>
+        <view class="instruction">请上传驾驶证照片</view>
+    </view>
+
+</view>

@@ -1,1 +1,30 @@
-/* pages/register/register.wxss */
+.container {
+    padding-top: 65rpx;
+}
+.lic-template {
+    width: 600rpx;
+    height: 450rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lic-image {
+    font-size: 100rpx;
+    position: absolute;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+}
+
+
+.instruction {
+    display: flex;
+    position: absolute;
+    bottom: -75rpx;
+}
+
+.cuIcon-cameraadd {
+    font-size: 120rpx;
+}
