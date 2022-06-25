@@ -1,0 +1,19 @@
+<!-- pages/learncss/learncss.wxml -->
+<view class="container">
+    <text user-select wx:if="{{showPath}}">pages/learncss/learncss.wxml</text>
+    <block wx:else>
+        <text>learn css</text>
+    </block>
+    <!-- <text wx:if="{{!showPath}}">learn css if-else</text> -->
+    <!-- view 类似html中的div -->
+    <!-- wx:key="" 这个是优化，如果插入新的数据，老的数据不需要重新渲染 -->
+    <!-- wx:key 如果挑不出key，可以不写（有warning）或写*this -->
+    <!-- <view wx:for="{{values}}" wx:for-item="val" wx:key="*this">value is {{val}}</view> -->
+    <view class="list">
+        <view class="item cu-avatar xl radius  {{val.id%2?'blue':'red'}}" wx:for="{{infos}}" wx:for-item="val" wx:key="id">
+            employee's name {{val.name}}
+
+        <view class="cu-tag badge">99+</view>
+        </view>
+    </view>
+</view>

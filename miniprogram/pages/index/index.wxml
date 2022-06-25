@@ -1,0 +1,29 @@
+    <map
+      class="map"
+      id="map"
+      latitude="{{location.latitude}}"
+      longitude="{{location.longitude}}"
+      markers="{{markers}}"
+      scale="{{scale}}"
+      show-location="{{showLocation}}"
+      show-compass="{{showCompass}}"
+      >
+      <cover-view class="icon-container">
+        <cover-image 
+          src="/image/account.png"
+        ></cover-image>
+        <cover-image
+         src="/image/my_location.png"
+          bindtap="onMyLocationTap"
+        ></cover-image>
+      </cover-view>
+
+
+      <!-- bg-grey:北京是灰色  round：是圆角的框   是colorui中的功能 -->
+      <cover-view class="btn-container bg-grey round" bindtap="onScanClicked">
+        <!-- 如果"扫描租车" 不用cover-view包裹，真机中并没按样式放在中间 -->
+        <cover-view >扫描租车</cover-view>
+      </cover-view>
+    </map>
+    
+
