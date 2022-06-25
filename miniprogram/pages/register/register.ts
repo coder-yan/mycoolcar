@@ -6,7 +6,8 @@ Page({
     genderIndex:0,
     birthDate: '1990-01-01',
     genders: ['未知','男','女','其他'],
-    licImageUrl: undefined as string | undefined
+    licImageUrl: '',
+    state: 'UNSUBMITTED' as 'UNSUBMITTED' | 'PENDING' | 'VERIFIED'
   },
 
   onUploadLic() {
@@ -46,6 +47,26 @@ Page({
     this.setData({
       birthDate: e.detail.value,
     })
-  }
+  },
 
+  onSubmit() {
+    this.setData({
+      state: 'PENDING'
+    })
+
+    setTimeout(() => {
+      this.onLicVerified()
+    }, 3000);
+  },
+  onReSubmit() {
+    this.setData({
+      state: 'UNSUBMITTED',
+      licImageUrl: '',
+    })
+  },
+  onLicVerified() {
+    this.setData({
+      state: 'VERIFIED'
+    })
+  }
 })
