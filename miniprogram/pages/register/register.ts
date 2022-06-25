@@ -68,5 +68,9 @@ Page({
     this.setData({
       state: 'VERIFIED'
     })
+
+    wx.redirectTo({
+      url: '/pages/lock/lock'
+    })
   }
 })
