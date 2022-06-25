@@ -1,0 +1,26 @@
+/* pages/learncss/learncss.wxss */
+page {
+    height: 100%;
+}
+.item.cu-avatar.xl {
+    /* font-size: x-large; */
+    width: unset;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid; */
+    align-items: center;
+    justify-content: space-around;
+    height: 750rpx;
+    /* width: 100%; */
+    align-self: stretch;
+}
+.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}

@@ -1,0 +1,46 @@
+
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  height: 136rpx;
+  width: 87rpx;
+  margin-top: 30rpx;
+
+  opacity: .6;
+}
+.icon-container cover-image {
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.btn-container {
+  /* 所有的屏幕是750rpx */
+  width: 600rpx;
+  /* bottom要和position一起用，都在不生效 */
+  bottom: 7%;
+  position: absolute;
+  margin-left: 75rpx;
+  height: 70rpx;
+
+  display: flex;
+  /* 文字左右居中 */
+  justify-content: center;
+  /* 文字上下居中 */
+  align-items: center;
+  opacity: .8;
+}
+

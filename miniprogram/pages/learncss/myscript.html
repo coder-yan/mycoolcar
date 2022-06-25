@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <div id="title" class="blue">租辆酷车</div>
+        <div>css教学</div>
+    </div>
+    <div class="trips">
+        <div class="item blue">
+            <div>中关村到天安门</div>
+            <div>价格：120元</div>
+        </div>
+        <div class="item red">
+            <div class="start">陆家嘴到迪士尼</div>
+            <div>价格：90元</div>
+            <div class="star"></div>
+        </div>
+        <div class="item blue">
+            <div>韩家村到动物园</div>
+            <div>价格：60元</div>
+        </div>
+    </div>
+
+    <style>
+        div {
+            font-size: large;
+        }
+
+        #title {
+            font-size: x-large;
+            /* font-size: 60px; */
+        }
+
+        .item.blue {
+            color: cornflowerblue;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .red {
+            color: red;
+            position: relative;
+        }
+
+        .star {
+            height: 20px;
+            width: 20px;
+            background-color: red;
+            /* position为absolute会把20*20px的方块占据的空间释放， fixed也会释放占据的空间，但是relative不会 */
+            position: absolute;
+            /* 父item的position设置为relative，top和right占比设置为0，就会摆放在右上角 */
+            top: 0;
+            right: 0;
+        }
+
+        .trips {
+            /* 默认高度不够自动向下显示 */
+            height: 800px;
+            /* height: 80%; */
+            /* 高度不够的时候，有一个滚动条 */
+            overflow: scroll;
+        }
+
+        .item {
+            border: 2px solid;
+        }
+    </style>
+</body>
+
+</html>
