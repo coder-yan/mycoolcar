@@ -1,21 +1,24 @@
-.container {
-    padding-top: 65rpx;
-}
+
 .lic-template {
+    /* 控制自己的宽度和高度 */
     width: 600rpx;
     height: 450rpx;
+    /* 控制自己的儿子 */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.stretch {
+    width: 100%;
+    height: 100%;
+}
+
 .lic-image {
     font-size: 100rpx;
     position: absolute;
     opacity: .2;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -27,4 +30,13 @@
 
 .cuIcon-cameraadd {
     font-size: 120rpx;
+}
+
+.lic-form {
+    width: 600rpx;
+}
+
+.cu-form-group .title {
+    /* 4em: tile是4个字符，再留30rpx */
+    min-width: calc(4em + 30rpx);
 }

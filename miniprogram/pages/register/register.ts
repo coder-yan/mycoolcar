@@ -1,66 +1,51 @@
 // pages/register/register.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    licNO: '',
+    name: '',
+    genderIndex:0,
+    birthDate: '1990-01-01',
+    genders: ['未知','男','女','其他'],
+    licImageUrl: undefined as string | undefined
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad() {
-
+  onUploadLic() {
+    wx.chooseImage({
+      
+      success: res => {
+        console.log(res.tempFilePaths[0])
+        if (res.tempFilePaths.length > 0) {
+          this.setData({
+            licImageUrl: res.tempFilePaths[0]
+          })
+          
+          //TODO upload image
+          setTimeout(() => {
+            this.setData({
+              licNO: '123456',
+              name:'张三',
+              genderIndex: 1,
+              birthDate: '1989-02-03'
+              
+            })
+          }, 1000);
+          
+        }
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  // 微信大部分参数是有类型的，但是事件是any
+  onGenderChange(e: any) {
+    this.setData({
+      genderIndex: e.detail.value,
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  onBirthDateChange(e: any) {
+    this.setData({
+      birthDate: e.detail.value,
+    })
   }
+
 })
