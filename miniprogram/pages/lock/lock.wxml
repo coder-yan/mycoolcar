@@ -1,10 +1,20 @@
 <view class="container">
-    <view class="static">
-        <image class="sedan" src="/image/sedan.png" />
-        <view class="margin-top">
-            <view >安全驾驶是用户的责任</view>
-            <view >请将车辆停放在停车位内</view>
-        </view>
-    </view>
-    <button style="width=80%" class="bg-grey lg">立即开锁</button>
+	<view class="static">
+		<image class="sedan" src="/image/sedan.png" />
+		<view class="margin-top">
+			<view>安全驾驶是用户的责任</view>
+			<view>请将车辆停放在停车位内</view>
+		</view>
+	</view>
+
+	<view class="avatar-container">
+		<button class="cu-avatar round lg bg-grey margin-xs"
+         bindtap="getUserProfile">
+			<text class="cuIcon-people"/>
+        </button>
+
+		<view class="margin-top">实时展示我的头像</view>
+	</view>
+	<button style="width=80%" class="bg-grey lg">立即开锁</button>
 </view>
+
